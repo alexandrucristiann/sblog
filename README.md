@@ -1,1 +1,1 @@
-# freeblog
+# simpleblog
