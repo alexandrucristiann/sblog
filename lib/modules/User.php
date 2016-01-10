@@ -28,7 +28,7 @@ class User {
         if($checkUnique->num_rows == 0)
         {
             try {
-                $sql->query("INSERT INTO `users` (`unique_user`,`username`,`password`,`email`,`rights`,`register_date`,`valid`) VALUES ('" . $uniqueUser . "'.'" . $username . "','" . md5($password) . "','" . $email . "',0,'" . date("Y-m-d") . "',1)");
+                $sql->query("INSERT INTO `users` (`unique_user`,`username`,`password`,`email`,`rights`,`register_date`,`valid`) VALUES ('" . $uniqueUser . "','" . $username . "','" . md5($password) . "','" . $email . "',0,'" . date("Y-m-d") . "',1)");
                 return new User($uniqueUser);
             } catch (InvalidUniqueException $e) {
                 throw new CriticalFaultException($e->getMessage());
@@ -41,14 +41,20 @@ class User {
     public static function login($username, $password)
     {
         global $sql;
-        $query = $checkLogin = $sql->query("SELECT `unique_user` FROM `users` WHERE `username`='" . $username . "' AND `password`='" . md5($password) . "'");
+        $checkLogin = $sql->query("SELECT `unique_user` FROM `users` WHERE `username`='" . $username . "' AND `password`='" . md5($password) . "'");
         if($checkLogin->num_rows != 1)
             throw new InvalidLoginCredentials();
         try {
-            return new User($query->fetch_assoc()['unique_user']);
+            return new User($checkLogin->fetch_assoc()['unique_user']);
         } catch (InvalidUniqueException $e) {
             throw new InvalidLoginCredentials();
         }
+    }
+
+    public function delete()
+    {
+        global $sql;
+        $sql->query("DELETE FROM `users` WHERE `unique_user`='" . $this->uniqueUser . "'");
     }
 
 }
