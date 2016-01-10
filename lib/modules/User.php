@@ -57,4 +57,18 @@ class User {
         $sql->query("DELETE FROM `users` WHERE `unique_user`='" . $this->uniqueUser . "'");
     }
 
+    public static function loginSession($uniqueUser)
+    {
+        global $sql;
+        $query = $sql->query("SELECT `unique_user`,`valid` FROM `users` WHERE `unique_user`='" . $uniqueUser . "'");
+        if($query->num_rows == 0)
+            throw new InvalidLoginCredentials();
+        if($query->num_rows > 1)
+            throw new InvalidUniqueException();
+        $check = $query->fetch_assoc();
+        $_SESSION['unique_user'] = $check['unique_user'];
+        $user =  new User($check['user_unique']);
+        return $user;
+    }
+
 }
