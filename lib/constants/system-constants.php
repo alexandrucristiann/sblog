@@ -6,7 +6,7 @@ define('HANDLERS_PATH',ROOT.'/lib/handlers/');
 define('MODELS_PATH',ROOT.'/lib/models/');
 define('MODULES_PATH',ROOT.'/lib/modules/');
 define('APPLICATION_CONSTANTS',ROOT.'/lib/constants/');
-define('LOADERS',ROOT.'lib/loaders/');
+define('LOADERS',ROOT.'/lib/loaders/');
 define('COLLECTION_PATH',ROOT.'/lib/collections/');
 define('CONSTANTS_PATH',ROOT.'/lib/constants/');
 define('EXCEPTIONS_PATH',ROOT.'/lib/exceptions/');
