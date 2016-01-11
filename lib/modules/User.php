@@ -8,8 +8,10 @@ class User {
     {
         $this->uniqueUser = $uniqueUser;
         global $sql;
-        $query = $sql->query("SELECT `username`, `email`, `rights`, `register_date`, `valid` FROM `users` WHERE `unique_user`='" . $this->uniqueUser . "'");
-        $data = $query->fetch_assoc();
+        $checkUnique = $sql->query("SELECT `username`, `email`, `rights`, `register_date`, `valid` FROM `users` WHERE `unique_user`='" . $this->uniqueUser . "'");
+        if ($checkUnique->num_rows == 0)
+            throw new InvalidUniqueException();
+        $data = $checkUnique->fetch_assoc();
         $this->username = $data['username'];
         $this->email = $data['email'];
         $this->rights = boolval($data['rights']);
@@ -23,8 +25,8 @@ class User {
         $checkEmail = $sql->query("SELECT `unique_user` FROM `users` WHERE `email`='" . $email . "'");
         if($checkEmail->num_rows != 0)
             throw new DuplicateEmailException();
-        $uniqueUser = rand(1,999).uniqid().rand(1,999);
-        $checkUnique= $sql->query("SELECT `unique_user` FROM `users` WHERE `unique_user`='" . $uniqueUser . "'");
+        $uniqueUser = rand(100,999) . uniqid() . rand(100,999);
+        $checkUnique = $sql->query("SELECT `unique_user` FROM `users` WHERE `unique_user`='" . $uniqueUser . "'");
         if($checkUnique->num_rows == 0)
         {
             try {
