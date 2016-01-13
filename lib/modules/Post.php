@@ -17,7 +17,7 @@ class Post {
         $this->content = $data['content'];
         $this->postTime = $data['postTime'];
         $this->category = $data['category'];
-        $this->tags =  $data['tags'];
+        $this->tags = $data['tags'];
         $this->visibility = $data['visibility'];
         $this->allowComments = $data['allow_comments'];
     }
@@ -38,6 +38,12 @@ class Post {
         }
         else
             throw new CriticalFaultException();
+    }
+
+    public function delete()
+    {
+        global $sql;
+        $sql->query("DELETE FROM `posts` WHERE `unique_post`='" . $this->uniquePost . "'");
     }
 
 }
