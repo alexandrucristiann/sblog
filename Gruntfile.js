@@ -1,6 +1,38 @@
 //exporting our grunt module
 module.exports = function(grunt) {
+
+grunt.registerTask('doc', function() {
+console.log(
+` 
+	
+=============== SBLOG WEB APP =========================
+
+In order to participate in development of the project
+please consult the README.md
+We will include a special section for developers.
+
+In order to have a fast development process we use this
+task runner called grunt to automate our tasks.
+
+
+Commands:
+	grunt compile
+
+	=== Compiles all the Sass and Jade files. We first concat
+	every sass file into one file and after that we compile to css.
+	All jade files are separate. (ex index.jade ==> index.html).
+	Jade files are compiled to html.
+	Using this template system we:
+	 - write less clunky markup;
+	 - maintaining is eazy;
+	 - time saver;
+`
+
+);});
+	
+	//Basic configurations
 	configObject = {
+
 		// SASS
 		sass: {
 			compile: {
@@ -39,6 +71,7 @@ module.exports = function(grunt) {
 			}//compile
 		},
 
+		//CONCAT
 		concat: {
 			jade: {
 				src: 'assets/sass/*.sass',
@@ -56,6 +89,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	//make grunt command
-	grunt.registerTask('default', ['jade','concat', 'sass']);
+	grunt.registerTask('compile', ['jade','concat', 'sass']);
 
+	grunt.registerTask('default', ['doc']);
 }//module.exports
