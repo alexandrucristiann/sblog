@@ -1,1 +1,1 @@
-
+console.log("Module loaded");
