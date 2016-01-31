@@ -4,7 +4,6 @@
   "description": "simple blog in php",
   "main": "index.php",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,11 +17,12 @@
   "homepage": "https://github.com/kriszt/sblog#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
+    "grunt-budo": "^0.1.1",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-jade": "^0.15.0",
-    "grunt-contrib-sass": "^0.9.2"
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1"
   },
-  "dependencies": {
-    "grunt": "^0.4.5"
-  }
+  "dependencies": {}
 }
