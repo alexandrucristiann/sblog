@@ -13,7 +13,7 @@ In order to start developing on the front-end side we used some **npm modules**.
 **Windows/Mac**
  * Node 
  * Npm  
- * **[download](!https://nodejs.org/en/)**
+ * [download](!https://nodejs.org/en/)
 
 **Linux**
 
@@ -33,7 +33,7 @@ yaourt -S nodejs npm
 pacman -S nodejs npm 
 ```
         
-If you need **[more info](!https://nodejs.org/en/download/package-manager/)** check here!
+If you need [more info](!https://nodejs.org/en/download/package-manager/) check here!
 
 Now from the cmd/terminal `cd` into the folder you just downloaded with:
 ```shell
