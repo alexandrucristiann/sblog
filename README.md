@@ -9,12 +9,13 @@
 In order to start developing on the front-end side we used some **npm modules**. Basically we setup the environment to live reload pages, to compile our system templates **jade** and **sass** to **html** and **css**. All of this task are automated by one of the javascript task runner called **Grunt**.
 
 #### Environment
- > Windows/Mac
+
+**Windows/Mac**
  * Node 
  * Npm  
  * **[download](!https://nodejs.org/en/)**
 
-> Linux
+**Linux**
    - Debian based:
         ```shell
             sudo apt-get install nodejs
