@@ -16,17 +16,22 @@ In order to start developing on the front-end side we used some **npm modules**.
  * **[download](!https://nodejs.org/en/)**
 
 **Linux**
-   - Debian based:
-        ```shell
-            sudo apt-get install nodejs
-        ```
-    - ArchLinux:
-         ```shell 
-            yaourt -S nodejs npm
-        ```
-         ```shell 
-            pacman -S nodejs npm 
-        ```
+
+- Debian based:
+
+```shell
+sudo apt-get install nodejs
+```
+
+- ArchLinux:
+
+```shell  
+yaourt -S nodejs npm
+```
+
+```shell   
+pacman -S nodejs npm 
+```
         
 If you need **[more info](!https://nodejs.org/en/download/package-manager/)** check here!
 
