@@ -8,15 +8,18 @@ html(lang="en")
 		meta(name='blogcatalog')
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		link(rel='stylesheet' type="text/css" href="assets/css/main.css")
+		link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface')
 	body
 		div.sidebar
 			div.sidebar-container 
 				div.sidebar-about
 					h1.sidebar-about__title
-						a(href='#') MyBlog
-					p.sidebar_about__text
-						Another yet successful blog template system build on Php,grunt
-						html5,css3 and other full blown features.
+						a(href='#') Blog
+					p.sidebar-about__text
+						|Another yet successful <a href="#">blog</a> template system 
+						|build on <a href="http://www.php.net/">@php</a>, 
+						|<a href="http://gruntjs.com">grunt</a>, <a href="#">@html5</a>,
+						|<a href="#">@css3</a> and other full blown technologies
 				nav.sidebar-navigation
 					ul.sidebar-list
 						li.sidebar-list__item
@@ -27,6 +30,8 @@ html(lang="en")
 							a(href='#') Articles
 						li.sidebar-list__item
 							a(href='#') Contact
+						li.sidebar-list__item.
+							Currently v0.0.1 Alpha
 				footer.sidebar-footer
 					&copy; #{new Date().getFullYear()}. All rights reserved.
 		div.content

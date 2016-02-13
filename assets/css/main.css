@@ -1,119 +1,84 @@
-/* html stylesheet reset
- */
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-del, dfn, em, img, ins, kbd, q, samp, small,
-strong, sub, sup, var, b, i, dl, dt, dd, ol, ul,
-li, fieldset, form, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td, article, aside,
-canvas, details, figcaption, figure, footer, header,
-hgroup, menu, nav, section, summary, time, mark, audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote {
-  quotes: none;
-}
-blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-q {
-  quotes: none;
-}
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-  background: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collpase;
-  border-spacing: 0;
-}
-
-/* change border color to suit your neeeds */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
 /* define all our colors */
 * {
-  transition: all 300ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-  font-size: 24px;
+  font-size: 20px;
+}
+
+html {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+
+body {
+  height: 100%;
 }
 
 .sidebar {
-  border: 5px solid lightcoral;
+  background-color: #202020;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-align: left;
+}
+.sidebar-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: #202020;
+  flex-direction: column;
+  padding: 1.1rem 1.1rem 1.1rem 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 1rem;
 }
-
-.sidebar-list__item {
+.sidebar-about {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.sidebar-about__title > a {
   text-decoration: none;
+  color: #fff;
+  font-family: "Abril Fatface", serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.sidebar-about__title > a:hover {
+  text-decoration: underline;
+}
+.sidebar-about__text {
+  font-weight: 300;
+  line-height: 1.52;
+  font-size: 1.2rem;
+}
+.sidebar-about__text > a {
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar-about__text > a:hover {
+  text-decoration: underline;
+}
+.sidebar-navigation {
+  line-height: 1.55;
+}
+.sidebar-list {
+  list-style-type: none;
+}
+.sidebar-list__item > a {
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar-list__item > a:hover {
+  text-decoration: underline;
+}
+.sidebar-list__item > a:active {
+  font-weight: bold;
+}
+.sidebar-footer {
+  margin-top: 1rem;
 }
