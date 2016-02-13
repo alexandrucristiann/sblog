@@ -1,7 +1,8 @@
 //exporting our grunt module
+"use strict";
 module.exports = function(grunt) {
-
 grunt.registerTask('doc', function() {
+
 console.log(
 `
 
@@ -19,8 +20,8 @@ Commands:
 
 *	grunt compile
 
-	=== Compiles all the Sass and Jade files. We first concat
-	every sass file into one file and after that we compile to css.
+	=== Compiles all the Sass and Jade files. All Sass files 
+	compiles to css.
 	All jade files are separate. (ex index.jade ==> index.html).
 	Jade files are compiled to html.
 	Using this template system we:
@@ -50,7 +51,7 @@ Commands:
 );});
 	
 	//Basic configurations
-	configObject = {
+	var configObject = {
 		pkg: grunt.file.readJSON('package.json'),
 		// SASS
 		sass: {
@@ -83,12 +84,12 @@ Commands:
 		},
 
 		//CONCAT
-		concat: {
-			jade: {
+		/*concat: {
+			sass: {
 				src: 'assets/sass/modules/*.sass',
 				dest: 'assets/sass/main.sass'
 			}
-		},
+		},*/
 		//BROWSERIFY
 		browserify: {
 			dist: {
@@ -120,8 +121,8 @@ Commands:
 			},
 
 			sass: {
-				files:['assets/sass/modules/*.sass'],
-				tasks:['concat', 'sass']
+				files:['assets/sass/**/*.sass'],
+				tasks:['sass']
 			},
 
 			jade: {
@@ -149,9 +150,9 @@ Commands:
 	grunt.loadNpmTasks('grunt-budo');
 
 	//make grunt command
-	grunt.registerTask('compile', ['jade', 'concat', 'sass', 'browserify']);
+	grunt.registerTask('compile', ['jade', 'sass', 'browserify']);
 	grunt.registerTask('live',['budo']);
 	grunt.registerTask('see', ['watch']);
 	//doc
 	grunt.registerTask('default', ['doc']);
-}//module.exports
+};//module.exports

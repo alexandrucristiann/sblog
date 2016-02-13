@@ -4,4 +4,7 @@
 .idea
 # node
 node_modules/
+# vim
 .tern-project
+.jshintrc
+

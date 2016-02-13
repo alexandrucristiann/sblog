@@ -61,8 +61,7 @@ Just open cmd with administrator privileges.And execute the same command above w
 ```
 
 
-Compiles all the Sass and Jade files. We first concat 
-every sass file into one file and after that we compile to css.
+Compiles all the Sass and Jade files. All sass files compiles to css.
 All jade files are separate. (ex index.jade --> index.html).
 Jade files are compiled to html.
 Using this template system we:

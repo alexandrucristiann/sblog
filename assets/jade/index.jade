@@ -9,7 +9,25 @@ html(lang="en")
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		link(rel='stylesheet' type="text/css" href="assets/css/main.css")
 	body
-		.row
-			.conent
-			.conent
+		div.sidebar
+			div.sidebar-container 
+				div.sidebar-about
+					h1.sidebar-about__title
+						a(href='#') MyBlog
+					p.sidebar_about__text
+						Another yet successful blog template system build on Php,grunt
+						html5,css3 and other full blown features.
+				nav.sidebar-navigation
+					ul.sidebar-list
+						li.sidebar-list__item
+							a(href='#') Home
+						li.sidebar-list__item
+							a(href='#') About
+						li.sidebar-list__item
+							a(href='#') Articles
+						li.sidebar-list__item
+							a(href='#') Contact
+				footer.sidebar-footer
+					&copy; #{new Date().getFullYear()}. All rights reserved.
+		div.content
 	script(src='assets/js/main.js', type='text/javascript')

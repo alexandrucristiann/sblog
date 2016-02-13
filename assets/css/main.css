@@ -1,20 +1,119 @@
-html {
-  font-family: "Source Sans Pro", "Helvetica Neve", Helvetica;
-  font-weight: normal;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.87);
+/* html stylesheet reset
+ */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+del, dfn, em, img, ins, kbd, q, samp, small,
+strong, sub, sup, var, b, i, dl, dt, dd, ol, ul,
+li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section, summary, time, mark, audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-div {
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-.row {
-  margin-left: auto;
-  margin-right: auto;
+nav ul {
+  list-style: none;
 }
 
-.content {
-  width: 50%;
-  margin-left: 0;
+blockquote {
+  quotes: none;
+}
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q {
+  quotes: none;
+}
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collpase;
+  border-spacing: 0;
+}
+
+/* change border color to suit your neeeds */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* define all our colors */
+* {
+  transition: all 300ms ease-in-out;
+}
+
+:root {
+  font-size: 24px;
+}
+
+.sidebar {
+  border: 5px solid lightcoral;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #202020;
+}
+
+.sidebar-list__item {
+  text-decoration: none;
 }
