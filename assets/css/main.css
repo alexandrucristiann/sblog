@@ -19,7 +19,9 @@ body {
 
 .sidebar {
   background-color: #202020;
-  width: 35%;
+  width: 19%;
+  min-width: 18em;
+  max-width: 18em;
   position: fixed;
   top: 0;
   left: 0;
