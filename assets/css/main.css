@@ -84,3 +84,20 @@ body {
 .sidebar-footer {
   margin-top: 1rem;
 }
+
+.content {
+  float: left;
+}
+
+.post {
+  margin-left: 25rem;
+}
+.post__title {
+  color: black;
+}
+.post__date {
+  color: #ccc;
+}
+.post__conentent {
+  text-align: left;
+}
